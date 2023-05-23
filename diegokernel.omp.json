@@ -22,7 +22,6 @@
           "template": " <#ffc107>[</>{{ .Path }}<#ffc107>]</>",
           "type": "path"
         },
-
         {
           "background": "#18354c",
           "foreground": "#fff",
@@ -36,7 +35,6 @@
           "template": "<#ffc107>-[</><#f1502f><b>{{ .HEAD }}</></>{{if .BranchStatus }}<#f1502f>:</>{{ .BranchStatus }}{{ end }}<#ffc107>]</>",
           "type": "git"
         },
-
         {
           "background": "#18354c",
           "foreground": "#fff",
@@ -44,10 +42,9 @@
             "fetch_status": true
           },
           "style": "plain",
-          "template": "<#ffc107>-[</>{{ if .Working.Changed }}{{ if .Working.Added }}<#f0f>+{{.Working.Added}}{{ end }}{{ if .Working.Untracked }}</><#0f0>?{{.Working.Untracked}}</>{{ end }}{{ if .Working.Modified }}<#ffc107>~{{.Working.Modified}}</>{{ end }}{{ if .Working.Deleted }}<#ff4242>-{{.Working.Deleted}}</>{{ end }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }}|{{ end }}{{ if .Staging.Changed }}<#0f0>{{ .Staging.String }}</>{{ end }}<#ffc107>]</>",
+          "template": "{{ if .Working.Changed }}<#ffc107>-[</>{{ if .Working.Added }}<#f0f>+{{.Working.Added}}{{ end }}{{ if .Working.Untracked }}</><#0f0>?{{.Working.Untracked}}</>{{ end }}{{ if .Working.Modified }}<#ffc107>~{{.Working.Modified}}</>{{ end }}{{ if .Working.Deleted }}<#ff4242>-{{.Working.Deleted}}</>{{ end }}<#ffc107>]</>{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }}|{{ end }}{{ if .Staging.Changed }}<#0f0>{{ .Staging.String }}{{ end }}",
           "type": "git"
         },
-
         {
           "background": "transparent",
           "foreground": "#18354c",
@@ -58,7 +55,6 @@
       ],
       "type": "prompt"
     },
-
     {
       "alignment": "right",
       "segments": [
@@ -78,9 +74,6 @@
       ],
       "type": "prompt"
     },
-
-
-
     {
       "alignment": "left",
       "newline": true,
